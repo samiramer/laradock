@@ -347,6 +347,8 @@ CADDY_HOST_HTTP_PORT=80
 CADDY_HOST_HTTPS_PORT=443
 CADDY_HOST_LOG_PATH=./logs/caddy
 CADDY_CUSTOM_CADDYFILE=./caddy/Caddyfile
+CADDY_CERT_FILE=./localhost.crt
+CADDY_CERT_KEY=./localhost.key
 
 ### LARAVEL ECHO SERVER ###################################
 
