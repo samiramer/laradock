@@ -31,3 +31,11 @@
 #     CREATE DATABASE db3;
 #     GRANT ALL PRIVILEGES ON DATABASE db3 TO db3;
 # EOSQL
+# 
+### default database and user for gitlab ##############################################
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    CREATE USER laradock_gitlab WITH PASSWORD 'laradock_gitlab';
+    CREATE DATABASE laradock_gitlab;
+    GRANT ALL PRIVILEGES ON DATABASE laradock_gitlab TO laradock_gitlab;
+    ALTER ROLE laradock_gitlab CREATEROLE SUPERUSER;
+EOSQL
