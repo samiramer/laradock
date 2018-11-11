@@ -619,3 +619,6 @@ MAILU_ADMIN=true
 MAILU_WEBMAIL=rainloop
 # Dav server implementation (value: radicale, none)
 MAILU_WEBDAV=radicale
+
+# SSL certificate path
+SSL_CERT_PATH=./ssl
