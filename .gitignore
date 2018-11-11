@@ -7,3 +7,4 @@
 /jenkins/jenkins_home
 *.crt
 *.key
+.DS_Store

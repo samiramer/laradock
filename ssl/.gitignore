@@ -1,4 +1,1 @@
-*.crt
-*.key
-*.csr
-*.ext
+.DS_Store

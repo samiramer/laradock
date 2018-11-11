@@ -1,19 +1,5 @@
-openssl genrsa -des3 -passout pass:x -out cp.d.pass.key 2048
-openssl rsa -passin pass:x -in cp.d.pass.key -out cp.d.key
-rm cp.d.pass.key
-openssl req -new -key cp.d.key -out cp.d.csr
+To create a new certificate, execute the following command.  
 
-vim v3.ext
+The resulting .crt and .key files will be saved in the certificates folder
 
-authorityKeyIdentifier=keyid,issuer
-basicConstraints=CA:FALSE
-keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
-subjectAltName = @alt_names
- 
-[alt_names]
-DNS.1 = cp.d
-
-openssl x509 -req -sha256 -extfile v3.ext -days 365 -in cp.d.csr -signkey cp.d.key -out cp.d.crt
-
-rm v3.ext
-rm cp.d.csr
+./generate_ssl.sh domain.com
