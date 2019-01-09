@@ -890,6 +890,20 @@ RUN if [ ${INSTALL_MYSQL_CLIENT} = true ]; then \
     apt-get -y install mysql-client \
 ;fi
 
+
+###########################################################################
+# GraphViz tool:
+###########################################################################
+
+USER root
+
+ARG INSTALL_GRAPHVIZ=false
+
+RUN if [ ${INSTALL_GRAPHVIZ} = true ]; then \
+    apt-get update -yqq && \
+    apt-get -y install graphviz \
+;fi
+
 ###########################################################################
 # Check PHP version:
 ###########################################################################
