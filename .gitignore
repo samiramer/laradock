@@ -5,6 +5,16 @@
 /.project
 .docker-sync
 /jenkins/jenkins_home
+<<<<<<< HEAD
 *.crt
 *.key
 .DS_Store
+=======
+
+/logstash/pipeline/*.conf
+/logstash/config/pipelines.yml
+
+/nginx/ssl/*.crt
+/nginx/ssl/*.key
+/nginx/ssl/*.csr
+>>>>>>> 8f6923531fa39fc2c76fc187fd3273ddd3527984
